@@ -1,0 +1,6 @@
+<span class="mdl-list__item-secondary-action">
+    <i class="material-icons r-vert-center r-pointer" (click)="decrease('str')">remove</i>
+    <input class="mdl-textfield__input r-stat r-inline" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="str" name="str" [(ngModel)]="characterModel.str">
+    <i class="material-icons r-vert-center r-pointer" (click)="increase('str')">add</i>
+    <label class="mdl-textfield__label" for="str">Krzepa</label>
+</span>

@@ -1,0 +1,101 @@
+<full-height-panel>
+    <div class="r-col r-fill">
+        <div class="r-row r-wrap r-wrap-center">
+            <div class="r-col">
+                <h2 class="r-text-center">Statystyki</h2>
+                <div class="r-row">
+                    <div class="character r-no-margin-top mdl-card mdl-shadow--2dp" [ngStyle]="{'background-image': characterModel.hasAvatar ? 'url(' + avatarUrl + ')' :
+    ''}" (click)="login(character)">
+                        <div class="mdl-card__title mdl-card--expand"></div>
+                        <div class="mdl-card__actions r-text-center">
+                            <span class="character-name">{{characterModel.name}}</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="mdl-grid r-no-padding r-space-between r-max-width-256">
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--file">
+                        <input class="mdl-textfield__input" placeholder="Wgraj avatar jpg 256px x 256px" type="text" id="uploadFile" readonly/>
+                        <div class="mdl-button mdl-button--primary mdl-button--icon mdl-button--file">
+                            <i class="material-icons">attach_file</i><input type="file" id="uploadBtn" (change)="onAvatarUpload($event)">
+                        </div>
+                    </div>
+                </div>
+                <div class="r-text-center">Doświadczenie:
+                    {{characterModel.exp}}</div>
+                <ul class="demo-list-three mdl-list">
+                    <li class="mdl-list__item mdl-list__item--three-line">
+                        <span class="mdl-list__item-primary-content">
+                            <i class="material-icons r-padding">fitness_center</i>
+                            <span>Krzepa:
+                                {{characterModel.stats.str.value}}</span>
+                            <span class="mdl-list__item-text-body r-text-light">
+                                <span class="r-text-dark-grey">Koszt zwiększenia:</span>
+                                <span class="r-text-active">1000</span>
+                            </span>
+                        </span>
+                        <span class="mdl-list__item-secondary-content">
+                            <a class="mdl-list__item-secondary-action" href="#">
+                                <i class="material-icons">add</i>
+                            </a>
+                        </span>
+                    </li>
+                    <li class="mdl-list__item mdl-list__item--three-line">
+                        <span class="mdl-list__item-primary-content">
+                            <i class="material-icons r-padding">directions_run</i>
+                            <span>Zwinność:
+                                {{characterModel.stats.agi.value}}</span>
+                            <span class="mdl-list__item-text-body">
+                                <span class="r-text-dark-grey">Koszt zwiększenia:</span>
+                                <span class="r-text-active">1000</span>
+                            </span>
+                        </span>
+                        <span class="mdl-list__item-secondary-content">
+                            <a class="mdl-list__item-secondary-action" href="#">
+                                <i class="material-icons">add</i>
+                            </a>
+                        </span>
+                    </li>
+                    <li class="mdl-list__item mdl-list__item--three-line">
+                        <span class="mdl-list__item-primary-content">
+                            <i class="material-icons r-padding">school</i>
+                            <span>Rzemiosło:
+                                {{characterModel.stats.int.value}}</span>
+                            <span class="mdl-list__item-text-body r-text-light">
+                                <span class="r-text-dark-grey">Koszt zwiększenia:</span>
+                                <span class="r-text-active">1000</span>
+                            </span>
+                        </span>
+                        <span class="mdl-list__item-secondary-content">
+                            <a class="mdl-list__item-secondary-action" href="#">
+                                <i class="material-icons">add</i>
+                            </a>
+                        </span>
+                    </li>
+                </ul>
+                <div class="mdl-grid r-no-padding r-space-between r-max-width-256">
+                    <button class="r-full-width r-no-margin-x mdl-cell mdl-cell--6-col mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" (click)="save()">
+                        Umiejętności
+                    </button>
+                </div>
+            </div>
+            <div class="r-col r-fill r-text-center character-description r-margin-x">
+                <h2>Opis wyglądu</h2>
+                <textarea class="mdl-textfield__input r-no-resize r-bg-dark r-fill" type="text"></textarea>
+            </div>
+            <div class="r-col r-fill r-text-center character-description r-margin-x">
+                <h2>Historia</h2>
+                <textarea class="mdl-textfield__input r-no-resize r-bg-dark r-fill" type="text"></textarea>
+            </div>
+        </div>
+        <div class="mdl-grid r-no-padding r-space-between r-max-width-256">
+            <button class="r-full-width r-no-margin-x mdl-cell mdl-cell--6-col mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" (click)="save()">
+                Zapisz
+            </button>
+        </div>
+        <div class="mdl-grid r-no-padding r-space-between r-max-width-256">
+            <button class="r-full-width r-no-margin-x mdl-cell mdl-cell--6-col mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" (click)="enterGame()">
+                Wejdź do gry
+            </button>
+        </div>
+    </div>
+</full-height-panel>

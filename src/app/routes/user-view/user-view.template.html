@@ -1,0 +1,20 @@
+<centered-panel>
+    <div class="r-divider r-light"></div>
+    <h2 class="r-text-center">Wybierz postać</h2>
+    <div class="r-row r-wrap r-wrap-center">
+        <div class="character mdl-card mdl-shadow--2dp" *ngFor="let character of user.characters" [ngStyle]="{'background-image': character.hasAvatar ? 'url(//shardgame.pl/server-assets/avatars/' + character.name.toLowerCase() + '.jpg)' :
+        ''}" (click)="login(character)">
+            <div class="mdl-card__title mdl-card--expand"></div>
+            <div class="mdl-card__actions r-text-center">
+                <span class="character-name">{{character.name}}</span>
+            </div>
+        </div>
+    </div>
+    <!-- Colored raised button -->
+    <div class="mdl-grid r-no-padding r-space-between r-max-width-256">
+        <button class="r-full-width r-no-margin-x mdl-cell mdl-cell--6-col mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" (click)="characterCreate()">
+            Stwórz nową postać
+        </button>
+    </div>
+    <div class="r-divider r-light"></div>
+</centered-panel>

@@ -1,0 +1,80 @@
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <header class="mdl-layout__header mdl-layout__header--waterfall r-opacity r-padding-mini">
+
+        <div class="mdl-layout__header-row">
+            <!-- Title -->
+            <span class="mdl-layout-title grey">Dunthag</span>
+
+            <!-- Add spacer, to align navigation to the right -->
+            <div class="mdl-layout-spacer"></div>
+
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right">
+                <label class="mdl-button mdl-js-button mdl-button--icon" for="fixed-header-drawer-exp">
+                    <i class="material-icons">search</i>
+                </label>
+                <div class="mdl-textfield__expandable-holder">
+                    <input class="mdl-textfield__input" type="text" name="sample" id="fixed-header-drawer-exp"/>
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+    <div class="mdl-layout__drawer">
+        <span class="mdl-layout-title">Znajomi</span>
+        <nav class="mdl-navigation">
+            <a class="mdl-navigation__link" href="">Rotenk</a>
+            <a class="mdl-navigation__link" href="">Rotenk1</a>
+            <a class="mdl-navigation__link" href="">Rotenk2</a>
+            <a class="mdl-navigation__link" href="">Rotenk3</a>
+        </nav>
+    </div>
+
+    <div class="mdl-layout__content">
+
+        <!-- Add spacer to push Footer down when not enough content -->
+        <div class="mdl-layout__content">
+            <div mdl class="mdl-grid no-padding r-center-panel">
+                <form action="#" class="mdl-layout__content overflow-visible">
+                    <div class="r-panel">
+                        <div class="r-divider"></div>
+                        <h2 class="r-text-center">Wejdź do gry</h2>
+                        <div>
+                            <div class="mdl-textfield mdl-js-textfield">
+                                <input class="mdl-textfield__input r-text-center" type="text" id="login">
+                                <label class="mdl-textfield__label r-text-center" for="login">Login</label>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="mdl-textfield mdl-js-textfield">
+                                <input class="mdl-textfield__input r-text-center" type="password" id="password">
+                                <label class="mdl-textfield__label r-text-center" for="password">Hasło</label>
+                            </div>
+                        </div>
+                        <!-- Colored raised button -->
+                        <div class="mdl-grid no-padding r-space-between">
+                            <button class="r-full-width no-margin-x mdl-cell mdl-cell--6-col mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored">
+                                Zaloguj
+                            </button>
+                            <button class="r-full-width no-margin-x mdl-cell mdl-cell--6-col mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored">
+                                Zarejestruj
+                            </button>
+                        </div>
+                        <div class="r-divider"></div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <footer class="mdl-mini-footer r-padding-mini r-no-bg r-col r-items-end">
+            <div class="mdl-mini-footer--middle-section">
+                <div class="mdl-logo">Dunthag - MMORPG v0.0.0</div>
+                <ul class="mdl-mini-footer--link-list">
+                    <li>
+                        <a href="//r0ten.com">© 2016 r0ten</a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+</div>

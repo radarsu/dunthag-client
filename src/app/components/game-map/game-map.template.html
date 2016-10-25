@@ -1,0 +1,8 @@
+<div class="map-container r-no-padding">
+    <div class="map-players-layer">
+        <game-map-character *ngFor="let char of onlineCharacters" [character]="char"></game-map-character>
+    </div>
+    <div class="r-row r-no-wrap r-no-margin r-no-padding" *ngFor="let row of _.range(character.room.height)">
+        <div class="map-slot" *ngFor="let slot of _.range(character.room.width)" [style.width.px]="slotSize" [style.height.px]="slotSize"></div>
+    </div>
+</div>

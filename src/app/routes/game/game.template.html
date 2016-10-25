@@ -1,0 +1,17 @@
+<full-height-panel>
+    <div class="r-col r-fill">
+        <header>{{character.name}} ({{character.room.name}})</header>
+        <div class="r-row r-fill r-wrap">
+            <div class="r-col r-fill">
+                <div class="chat r-fill-max r-bg-dark" [innerHtml]="chat" [style.min-width.px]="640"></div>
+                <div>
+                    <!-- Slider -->
+                    <md-slider min="0" max="100" [(ngModel)]="playerVolume"></md-slider>
+                </div>
+                <textarea class="r-fill mdl-textfield__input r-bg-dark message" type="text" placeholder="Słowa postaci [opis czynności] (offtop)" [(ngModel)]="message" (keydown.enter)="sendMessage()" rows="8"></textarea>
+            </div>
+            <game-map></game-map>
+        </div>
+    </div>
+</full-height-panel>
+<youtube-player [videoId]="music" (ready)="savePlayer($event)" (change)="onPlayerStateChange($event)"></youtube-player>

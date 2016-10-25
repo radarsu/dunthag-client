@@ -1,0 +1,72 @@
+<centered-panel>
+    <div class="r-divider r-light"></div>
+    <h2 class="r-text-center">Kreator postaci</h2>
+    <form action="#">
+        <!-- name -->
+        <div>
+            <div class="mdl-textfield mdl-js-textfield">
+                <input class="mdl-textfield__input r-text-center" type="text" placeholder="Nazwa" id="name" name="name" [(ngModel)]="characterModel.name">
+                <label class="mdl-textfield__label r-text-center" for="name"></label>
+            </div>
+        </div>
+        <!-- sex -->
+        <div class="r-space-around r-row">
+            <label mdl class="mdl-radio mdl-js-radio mdl-js-ripple-effect r-flex" *ngFor="let sex of sexes">
+                <input type="radio" id="{{sex.code}}" class="mdl-radio__button" name="sex" value="{{sex.code}}" [(ngModel)]="characterModel.sex" (ngModelChange)="sexChange()" [checked]="sex.code === characterModel.sex">
+                <span class="mdl-radio__label">{{_.upperFirst(sex.name)}}</span>
+            </label>
+        </div>
+        <br/>
+        <!-- race -->
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select">
+            <input class="mdl-textfield__input" type="text" id="race" value="" readonly tabIndex="-1" name="race" [(ngModel)]="raceText" />
+            <ul for="race" class="mdl-menu mdl-menu--bottom-left mdl-js-menu r-full-width">
+                <li mdl class="mdl-menu__item" *ngFor="let race of races" (click)="chooseRace(race.code)">{{_.upperFirst(race.name)}}</li>
+            </ul>
+        </div>
+        <!-- statistics -->
+        <div class="r-text-center">Punkty wolne: {{characterModel.stats.free}}</div>
+        <ul class="mdl-list">
+            <li class="mdl-list__item">
+                <span class="mdl-list__item-primary-content">
+                    <i class="r-padding material-icons">fitness_center</i>
+                    Krzepa
+                </span>
+                <span class="mdl-list__item-secondary-action">
+                    <i class="material-icons r-vert-center r-pointer" (click)="decrease('str')">remove</i>
+                    <input class="mdl-textfield__input r-stat r-inline" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="str" name="str" [(ngModel)]="characterModel.stats.str"/>
+                    <i class="material-icons r-vert-center r-pointer" (click)="increase('str')">add</i>
+                </span>
+            </li>
+            <li class="mdl-list__item">
+                <span class="mdl-list__item-primary-content">
+                    <i class="r-padding material-icons">directions_run</i>
+                    Zręczność
+                </span>
+                <span class="mdl-list__item-secondary-action">
+                    <i class="material-icons r-vert-center r-pointer" (click)="decrease('agi')">remove</i>
+                    <input class="mdl-textfield__input r-stat r-inline" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="agi" name="agi" [(ngModel)]="characterModel.stats.agi"/>
+                    <i class="material-icons r-vert-center r-pointer" (click)="increase('agi')">add</i>
+                </span>
+            </li>
+            <li class="mdl-list__item">
+                <span class="mdl-list__item-primary-content">
+                    <i class="r-padding material-icons">school</i>
+                    Wiedza
+                </span>
+                <span class="mdl-list__item-secondary-action">
+                    <i class="material-icons r-vert-center r-pointer" (click)="decrease('int')">remove</i>
+                    <input class="mdl-textfield__input r-stat r-inline" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="int" name="int" [(ngModel)]="characterModel.stats.int"/>
+                    <i class="material-icons r-vert-center r-pointer" (click)="increase('int')">add</i>
+                </span>
+            </li>
+        </ul>
+        <!-- Colored raised button -->
+        <div class="mdl-grid r-no-padding r-space-between r-max-width-256">
+            <button class="r-full-width r-no-margin-x mdl-cell mdl-cell--6-col mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" (click)="characterCreate()">
+                Stwórz postać
+            </button>
+        </div>
+    </form>
+    <div class="r-divider r-light"></div>
+</centered-panel>

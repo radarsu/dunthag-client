@@ -1,0 +1,15 @@
+:host {
+    display: flex;
+    background: rgba(0,0,0,.8);
+    margin: 0;
+    // border-right: 1px solid rgba(100, 100, 100, .5);
+    // border-bottom: 1px solid rgba(100, 100, 100, .5);
+    border: 1px solid rgba(100, 100, 100, .5);
+    overflow: hidden;
+    word-break: break-word;
+    width:64px;
+    height:64px;
+    background-size: 100%;
+    position: absolute;
+    background-image: url(/assets/img/default-avatar.jpg);
+}

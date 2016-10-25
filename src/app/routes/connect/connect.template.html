@@ -1,0 +1,11 @@
+<centered-panel>
+    <span class="r-divider r-light"></span>
+    <h3>{{status}}</h3>
+    <h5>{{comment}}</h5>
+    <span [class.hidden]="!loading" class="r-text-center r-inline-block r-bigger">
+        <!-- MDL Spinner Component with Single Color -->
+        <span class="mdl-spinner mdl-spinner--single-color mdl-js-spinner is-active r-big"></span>
+    </span>
+    <span class="r-divider r-light"></span>
+    <version-footer></version-footer>
+</centered-panel>

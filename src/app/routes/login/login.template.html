@@ -1,0 +1,27 @@
+<centered-panel>
+    <div class="r-divider r-light"></div>
+    <h2 class="r-text-center">Wejdź do gry</h2>
+    <div>
+        <div class="mdl-textfield mdl-js-textfield">
+            <input class="mdl-textfield__input r-text-center" type="text" placeholder="Login" id="login"  [(ngModel)]="user.login">
+            <label class="mdl-textfield__label r-text-center" for="login"></label>
+        </div>
+    </div>
+    <div>
+        <div class="mdl-textfield mdl-js-textfield">
+            <input class="mdl-textfield__input r-text-center" type="password" placeholder="Hasło" id="password" [(ngModel)]="user.password">
+            <label class="mdl-textfield__label r-text-center" for="password"></label>
+        </div>
+    </div>
+    <!-- Colored raised button -->
+    <div class="mdl-grid r-no-padding r-space-between">
+        <button class="r-full-width r-no-margin-x mdl-cell mdl-cell--6-col mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" (click)="login()">
+            Zaloguj
+        </button>
+        <button class="r-full-width r-no-margin-x mdl-cell mdl-cell--6-col mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" (click)="signup()">
+            Zarejestruj
+        </button>
+    </div>
+    <div class="r-divider r-light"></div>
+    <version-footer></version-footer>
+</centered-panel>

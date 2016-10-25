@@ -1,0 +1,25 @@
+.chat {
+    height: 80%;
+    overflow: auto;
+    font-family: Verdana;
+    font-size: 14px;
+    word-break: break-word;
+}
+
+.message {
+    max-width: 100%;
+}
+
+.mdl-tabs__panel {
+    display: flex;
+}
+
+header {
+    display: flex;
+    padding: 8px;
+    background: rgba(20,20,20,.9);
+}
+
+youtube-player {
+    display: none;
+}
